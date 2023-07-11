@@ -1,0 +1,32 @@
+<h2>  List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+          
+            <th> Student Name</th>
+            <th> Contact Number </th>
+            <th> Course</th>
+            <th> Addmission Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students" >
+            <td> {{student.studentName }} </td>
+           <td>{{student.mobileNo}}</td>
+            <td> {{ student.course }} </td>
+            <td> {{ student.addmission_status }} </td>
+            <td>
+                <button (click) = "updateStudent(student.id)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteStudent(student.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "studentsDetails(student.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2023 @RahulPatil</span>
+    </div>
+  </footer>
